@@ -7,6 +7,9 @@ class Settings(BaseSettings):
     db_pwd: str
     db_port: str
 
+    secret_code: str = 'secret_code_here'
+    algs: str = 'HS256'
+
     class Config:
         env_file = abspath(".env")
 
