@@ -1,5 +1,6 @@
 from models import Item
 from sqlalchemy.orm import Session
+from app.exception.business_exception import BusinessException
 
 import schemas.item as ItemSchemas
 import app.constant as Constant
@@ -27,7 +28,7 @@ def update_item(item_id: int, payload: dict, db: Session):
     item = get_item_by_id(item_id, db)
 
     if not item:
-        return {"message": f"Item id: {item_id} not found"}
+        raise BusinessException(name="Item")
 
     item.update(**payload.dict())
 
