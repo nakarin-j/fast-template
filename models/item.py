@@ -1,4 +1,3 @@
-from typing import Counter
 from db.db_class import Base
 from sqlalchemy import Column, String, Text
 
