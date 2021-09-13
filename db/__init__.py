@@ -4,8 +4,8 @@ import config.default as Config
 
 
 SQLALCHEMY_DATABASE_URL = (
-    f"postgresql://{Config.setting.db_user}"
-    f":{Config.setting.db_pwd}@localhost:{Config.setting.db_port}/{Config.setting.db_name}"
+    f"postgresql://{Config.setting.DB_USER}"
+    f":{Config.setting.DB_PWD}@{Config.setting.DB_HOST}:{Config.setting.DB_PORT}/{Config.setting.DB_NAME}"
 )
 
 engine = create_engine(

@@ -6,7 +6,6 @@ import re
 
 
 mapper_registry = registry()
-
 @mapper_registry.as_declarative_base()
 class Base(object):
 
