@@ -9,7 +9,7 @@ from app.dependencies.db import get_db
 import app.services.item_service as ItemService
 import schemas.item as ItemSchemas
 
-router = APIRouter(prefix=f"{PREFIX}/item")
+router = APIRouter(prefix=f"{PREFIX}/item", tags=['item'])
 
 @router.get('/')
 def get_items(db: Session = Depends(get_db)):
