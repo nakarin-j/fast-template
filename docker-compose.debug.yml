@@ -4,8 +4,6 @@ services:
     build:
       context: .
       dockerfile: "Dockerfile"
-    volumes:
-      - ".:/app"
     ports:
       - "8000:80"
     entrypoint: "/start-reload.sh"
