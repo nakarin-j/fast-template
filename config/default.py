@@ -1,14 +1,12 @@
 from pydantic import BaseSettings
-from os.path import abspath
+import os
 
 class Settings(BaseSettings):
-    DB_HOST: str
-    DB_USER: str
-    DB_NAME: str
-    DB_PWD: str
-    DB_PORT: str
-    class Config:
-        env_file = abspath(".env")
+    DB_HOST: str = os.getenv("DB_HOST", "localhost") 
+    DB_USERNAME: str = os.getenv("DB_USERNAME")
+    DB_NAME: str = os.getenv("DB_NAME")
+    DB_PASSWORD: str = os.getenv("DB_PASSWORD")
+    DB_PORT: str = os.getenv("DB_PORT")
 
 
 setting = Settings()

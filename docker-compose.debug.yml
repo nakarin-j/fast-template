@@ -7,10 +7,10 @@ services:
     volumes:
       - ".:/app"
     ports:
-      - "8000:8000"
+      - "8000:80"
     entrypoint: "/start-reload.sh"
     environment:
-      DB_HOST: "localhost"
+      DB_HOST: "host.docker.internal"
       DB_USERNAME: "postgres"
       DB_PASSWORD: "1234"
       DB_NAME: "fast"
