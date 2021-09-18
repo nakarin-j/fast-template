@@ -1,0 +1,15 @@
+version: "3.4"
+services:
+  fast-backend:
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+    ports:
+      - "8000:8000"
+    environment:
+      DB_HOST: "localhost"
+      DB_USERNAME: "postgres"
+      DB_PASSWORD: "1234"
+      DB_NAME: "fast"
+      DB_PORT: 15432
+    
