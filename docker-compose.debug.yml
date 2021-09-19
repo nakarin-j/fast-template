@@ -8,7 +8,7 @@ services:
       - "8000:80"
     entrypoint: "/start-reload.sh"
     environment:
-      DB_HOST: "host.docker.internal"
+      DB_HOST: "172.17.0.1"
       DB_USERNAME: "postgres"
       DB_PASSWORD: "1234"
       DB_NAME: "fast"
